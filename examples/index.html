@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<title>GeoJSON-SFX Example</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css" />
+<style type="text/css">
+body {
+	background: #ddf;
+	color:#669;
+	margin:20px;
+}
+h2,h3,h4,h5 {margin:6px 0}
+a {text-decoration: none;}
+p {margin:0 0 20px 0}
+ul {
+	font-size:.85em;
+	margin:0 0 10px 0;
+	padding:0;
+}
+li {
+	margin:0 0 2px 18px;
+}
+#map {
+	border:2px solid #669;
+	width:600px;
+	height:340px;
+	float:left;
+}
+#copy {
+	position:fixed;
+	z-index:1000;
+	right:150px;
+	top:-6px;
+	font-style:italic;
+	font-size:.85em;
+	padding:5px 8px;
+	background: #ccc;
+	border: 2px solid #3e5585;		
+	border-radius:.7em;
+	opacity: 0.8;		
+}
+#copy a {
+	color:#285585
+}
+#ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	filter: alpha(opacity=80);
+	-khtml-opacity: .8;
+	-moz-opacity: .8;
+	opacity: .8;		
+}
+</style>
+</head>
+<body>
+<h3><a href="../">GeoJSON-SFX</a></h3>
+
+<h4>Simple Example</h4>
+
+<div style="width:600px">
+	<div id="map">
+	</div>
+</div>
+
+<div id="copy"><a href="http://labs.easyblog.it/">Labs</a> &bull; <a rel="author" href="http://labs.easyblog.it/stefano-cudini/">Stefano Cudini</a></div>
+<a href="https://github.com/stefanocudini/GeoJSON-SFX"><img id="ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<script src="../node_modules/leaflet/dist/leaflet.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+
+	var map = new L.Map('map', {
+			layers: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+		});
+
+	$.ajax({
+		url: 'http://localhost:8080/data/umbria.geojson',
+		dataType: 'jsonp',
+		jsonp: 'jsonpcallback',
+		success: function(json) {
+			var glayer = L.geoJson(json);
+			map.addLayer( glayer );
+			map.fitBounds( glayer.getBounds() )
+		}
+	});
+
+</script>
+</body>
+</html>
