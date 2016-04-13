@@ -1,2 +1,2 @@
 # GeoJSON-SFX
-GeoJSON Self Extracting, a tool to build compressed GeoJSON data distributed over JSONP service in a simple Javascript file with no dependencies
+Self Extracting GeoJSON, a tool to build compressed GeoJSON distributed over JSONP in a compact, no dependencies Javascript file
