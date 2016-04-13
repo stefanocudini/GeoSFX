@@ -10,7 +10,6 @@ $ npm install
 
 # Run
 ```
-$ cd examples
 $ node app.js
 
 ```
