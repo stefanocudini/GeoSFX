@@ -1,10 +1,9 @@
 
-var pkg = require('./package.json'),
+var fs = require('fs'),	
 	uglify = require('uglify-js');
+	polylineext = require('polyline-ext'),
 	express = require('express'),
-	geobuf = require('geobuf'),
-	pbf = require('pbf'),
-	fs = require('fs'),	
+	pkg = require('./package.json'),
 	app = express();
 
 const defOpts = {
