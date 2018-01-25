@@ -1,5 +1,5 @@
 {
-  "name": "geojson-sfx",
+  "name": "geosfx",
   "version": "1.0.0",
   "description": "Self Extracting GeoJSON build compressed GeoJSON distributed over JSONP in a compact, no dependencies Javascript file",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefanocudini/GeoJSON-SFX.git"
+    "url": "git+https://github.com/stefanocudini/GeoSFX.git"
   },
   "keywords": [
     "geojson",
@@ -26,9 +26,9 @@
     "email": "stefano.cudini@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/stefanocudini/GeoJSON-SFX",
+  "homepage": "https://github.com/stefanocudini/GeoSFX",
   "bugs": {
-    "url": "https://github.com/stefanocudini/GeoJSON-SFX/issues"
+    "url": "https://github.com/stefanocudini/GeoSFX/issues"
   },
   "devDependencies": {
     "jquery": "^3.0.0",
