@@ -31,7 +31,7 @@
     "url": "https://github.com/stefanocudini/GeoJSON-SFX/issues"
   },
   "devDependencies": {
-    "jquery": "^2.2.3",
+    "jquery": "^3.0.0",
     "leaflet": "^0.7.7"
   },
   "dependencies": {
