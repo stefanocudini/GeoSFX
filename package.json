@@ -1,6 +1,6 @@
 {
   "name": "geosfx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Self Extracting GeoJSON build compressed GeoJSON distributed over JSONP in a compact, no dependencies Javascript file",
   "directories": {
     "example": "examples"
